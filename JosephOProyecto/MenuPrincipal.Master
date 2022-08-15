@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuPrincipal.master.cs" Inherits="JosephOProyecto.MenuPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
+    <link rel="stylesheet" type="text/css" href="css/Estilo.css" />
+    <link rel="stylesheet" type="text/css" href="css/Menu.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	
+	<link rel="stylesheet" href="css/style.css"/>
+
+    <title>Estado Financiero Familia Ovarez</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <span>Bienvenido:</span>
+                <asp:Label ID="LUsuario" runat="server" Text=""></asp:Label>
+            </div>
+            <div>
+                <span>Fecha:</span>
+                <asp:Label ID="LFecha" runat="server" Text=""></asp:Label>
+            </div>
+            <ul>
+                
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Home</button>
+            <div class="dropdown-content">
+                <a href="Inicio.aspx">Inicio</a>
+                <a href="Log.aspx">Cerrar Sesion</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Catalogo Persona</button>
+            <div class="dropdown-content">
+                <a href="AgregarPersona.aspx">Agregar Persona</a>
+                <a href="EliminarPersona.aspx">Eliminar/Consultar Persona</a>
+                <a href="ActualizarPersona.aspx">Actualizar Personas</a>
+            </div>
+        </div>
+         <div class="dropdown">
+            <button class="dropbtn">Catalogo Usuarios</button>
+            <div class="dropdown-content">
+                <a href="AgregarUsuario.aspx">Agregar Usuario</a>
+                <a href="EliminarUsuario.aspx">Eliminar/Consultar Usuario</a>
+                <a href="ActualizarUsuario.aspx">Actualizar Usuario</a>
+               
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Catalogo Tipo Usuario</button>
+            <div class="dropdown-content">
+                <a href="AgregarTipoUS.aspx">Agregar Tipo Usuario</a>
+                <a href="EliminarTipoUS.aspx">Eliminar Tipo Usuario</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Catalogo Transacciones</button>
+            <div class="dropdown-content">
+                <a href="AgregarTransaccion.aspx">Agregar Transaccion</a>
+                <a href="EliminarTransaccion.aspx">Eliminar/Consultar Transaccion</a>
+                <a href="ActualizarTransaccion.aspx">Actualizar Transaccion</a>
+            </div>
+        </div>  
+
+        <div style="margin-left: 25%; padding: 1px 16px; height: 1000px;">
+            <h2>Bienvenido</h2>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
